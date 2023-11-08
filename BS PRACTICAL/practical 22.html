@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Face Changer</title>
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <script>
+ $(document).ready(function() {
+ // Add change event handler to the dropdown
+ $('#faceSelector').change(function() {
+ // Get the selected value
+ var selectedFace = $(this).val();
+ // Set the image source based on the selected value
+ var imagePath = '';
+ switch (selectedFace) {
+ case 'happy':
+ imagePath = 'happy_face.png';
+ break;
+ case 'sad':
+ imagePath = 'sad_face.png';
+ break;
+ case 'angry':
+ imagePath = 'angry_face.png';
+ break;
+ default:
+ imagePath = 'default_face.png';
+ }
+ // Update the image source
+ $('#faceImage').attr('src', imagePath);
+ });
+ });
+ </script>
+</head>
+<body>
+ <h1>Face Changer</h1>
+ <select id="faceSelector">
+ <option value="happy">Happy</option>
+ <option value="sad">Sad</option>
+ <option value="angry">Angry</option>
+ </select>
+ <br>
+ <img id="faceImage" src="default_face.png" alt="Face Image">
+</body>
+</html>

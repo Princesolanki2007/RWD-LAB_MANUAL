@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Animated Div Color Change</title>
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <script>
+ $(document).ready(function() {
+ // Add click event handler to start animation button
+ $('#startAnimation').click(function() {
+ // Animate the div
+ $('#animatedDiv').animate({ width: '300px' }, 2000, function() {
+ // Animation complete, change the color of the div
+ $(this).css('background-color', 'red');
+ });
+ });
+ });
+ </script>
+ <style>
+ #animatedDiv {
+ width: 100px;
+ height: 100px;
+ background-color: blue;
+ }
+ </style>
+</head>
+<body>
+ <h1>Animated Div Color Change</h1>
+ <button id="startAnimation">Start Animation</button>
+ <div id="animatedDiv"></div>
+</body>
+</html>

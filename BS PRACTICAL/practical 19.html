@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Add Rows to Table</title>
+ <script>
+ function addRow() {
+ // Get a reference to the table
+ var table = document.getElementById("myTable");
+ // Create a new row
+ var row = table.insertRow();
+ // Create cells and set their content
+ var cell1 = row.insertCell();
+ var cell2 = row.insertCell();
+ var cell3 = row.insertCell();
+ cell1.innerHTML = "Cell 1";
+ cell2.innerHTML = "Cell 2";
+ cell3.innerHTML = "Cell 3";
+ }
+ </script>
+</head>
+<body>
+ <button onclick="addRow()">Add Row</button>
+ <table id="myTable">
+ <tr>
+ <th>Header 1</th>
+ <th>Header 2</th>
+ <th>Header 3</th>
+ </tr>
+ <tr>
+ <td>Row 1 Cell 1</td>
+ <td>Row 1 Cell 2</td>
+ <td>Row 1 Cell 3</td>
+ </tr>
+ <tr>
+ <td>Row 2 Cell 1</td>
+ <td>Row 2 Cell 2</td>
+ <td>Row 2 Cell 3</td>
+ </tr>
+ </table>
+</body>
+</html>
